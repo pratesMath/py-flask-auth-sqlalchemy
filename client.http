@@ -1,0 +1,39 @@
+@BASE_URL= http://127.0.0.1:5000
+
+### Create User
+POST {{BASE_URL}}/user
+Content-Type: application/json
+
+{
+  "username": "JohnDoe@123",
+  "password": "MySecurePassword@321"
+}
+
+### Login
+POST {{BASE_URL}}/login
+Content-Type: application/json
+
+{
+  "username": "JohnDoe@123",
+  "password": "MySecurePassword@321"
+}
+
+### Logout
+GET {{BASE_URL}}/logout
+Content-Type: application/json
+
+### Get user by id
+GET {{BASE_URL}}/user/1
+Content-Type: application/json
+
+### Update user by id
+PUT {{BASE_URL}}/user/1
+Content-Type: application/json
+
+{
+  "password": "MySecurePassword@321"
+}
+
+### Delete user by id
+DELETE {{BASE_URL}}/user/1
+Content-Type: application/json
